@@ -4,64 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Percentage Calculator</title>
-    <style>
-        // resources/sass/app.scss
+    <link rel="stylesheet" href="../css/app.css">
 
-body {
-    font-family: 'Helvetica', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
 
-h1 {
-    color: #333;
-}
-
-form {
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-}
-
-input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-    </style>
 </head>
 <body>
-<a href="/">Welcome</a>
-<br>
-<a href="/about">About</a>
-<br>
-<a href="/contact">Contact</a>
+<center>
+        <h1>Welcome to Percentage or Grade finder</h1>
+ 
+    <nav>
+        <a href="{{ route('home') }}">Welcome</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="{{ route('calculate') }}">Percentage and Grade Calculator</a>
+    </nav>
+    </center>
     <h1>Percentage Calculator</h1>
     @if(isset($percentage) && isset($grade))
         <p>Percentage: {{ $percentage }}%</p>

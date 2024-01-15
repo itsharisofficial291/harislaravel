@@ -1,6 +1,12 @@
 <h1>My name is</h1>
-<a href="/">Welcome</a>
-<br>
-<a href="/about">About</a>
-<br>
-<a href="/contact">Contact</a>
+<center>
+        <h1>Welcome to Percentage or Grade finder</h1>
+ 
+    <nav>
+        <a href="{{ route('home') }}">Welcome</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="{{ route('calculate') }}">Percentage and Grade Calculator</a>
+    </nav>
+    </center>
+    <link rel="stylesheet" href="css/app.css">
