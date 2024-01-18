@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CalculatorController;
+use App\Http\Controllers\formexample;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,8 +27,13 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+Route::get('/form', function () {
+    return view('form');
+});
 
 Route::get('/calculate', [CalculatorController::class, 'index'])->name('calculate');
 Route::post('/calculate', [CalculatorController::class, 'calculate']);
+Route::post('/register', [formexample::class, 'createform']);
+
 
 ?>
