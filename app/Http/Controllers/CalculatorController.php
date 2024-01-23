@@ -17,7 +17,6 @@ class CalculatorController extends Controller
         $obtainedMarks = $request->input('obtained_marks');
 
         $percentage = ($obtainedMarks / $totalMarks) * 100;
-
         $grade = $this->calculateGrade($percentage);
 
         return view('calculator', compact('percentage', 'grade'));
@@ -27,20 +26,15 @@ class CalculatorController extends Controller
     {
         if ($percentage >= 90) {
             return 'A+';
-        } elseif ($percentage >= 80) {
-            return 'A';
         } elseif ($percentage >= 70) {
-            return 'A'; // Changed to 'A' for percentages in the 70s
+            return 'A'; // Changed to 'B' for percentages in the 70s
         } elseif ($percentage >= 60) {
             return 'B';
         } elseif ($percentage >= 50) {
             return 'C';
-        } elseif ($percentage >= 40) {
-        return 'D';
-        } 
-        elseif ($percentage >= 33) {
-            return 'E';
-        }else {
+        } elseif ($percentage >= 33) {
+            return 'D';
+        } else {
             return 'Fail';
         }
     }    

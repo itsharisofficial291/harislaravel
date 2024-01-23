@@ -31,9 +31,12 @@ Route::get('/form', function () {
     return view('form');
 });
 
-Route::get('/calculate', [CalculatorController::class, 'index'])->name('calculate');
-Route::post('/calculate', [CalculatorController::class, 'calculate']);
-Route::post('/register', [formexample::class, 'createform']);
+// Display the calculator form
+Route::get('/calculator', [CalculatorController::class, 'index'])->name('calculator');
 
+// Handle the form submission and calculate the result
+Route::post('/calculator', [CalculatorController::class, 'calculate']);
+
+Route::post('/form', [formexample::class, 'createform']);
 
 ?>
