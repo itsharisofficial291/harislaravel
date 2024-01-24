@@ -30,6 +30,9 @@ Route::get('/contact', function () {
 Route::get('/form', function () {
     return view('form');
 });
+Route::get('/master', function () {
+    return view('master');
+});
 
 // Display the calculator form
 Route::get('/calculator', [CalculatorController::class, 'index'])->name('calculator');
