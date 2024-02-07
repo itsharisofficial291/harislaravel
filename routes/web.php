@@ -1,9 +1,8 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CalculatorController;
-use App\Http\Controllers\formexample;
-
+use App\Http\Controllers\FormExampleController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +15,7 @@ use App\Http\Controllers\formexample;
 |
 */
 
+// Basic pages
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
@@ -27,19 +27,20 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
-Route::get('/form', function () {
-    return view('form');
-});
+
 Route::get('/master', function () {
     return view('master');
 });
 
-// Display the calculator form
+// Calculator routes
 Route::get('/calculator', [CalculatorController::class, 'index'])->name('calculator');
-
-// Handle the form submission and calculate the result
 Route::post('/calculator', [CalculatorController::class, 'calculate']);
 
-Route::post('/form', [formexample::class, 'createform']);
+Route::get('/register', [RegisterController::class, 'showRegistrationForm']);
+Route::post('/register', [RegisterController::class, 'register']);
+
+
+
+
 
 ?>

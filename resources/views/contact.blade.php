@@ -1,7 +1,7 @@
 @include('welcome');
 
 @php
-$name= ["Haris","Ahmed","Ansari","Haris","Ahmed","Ansari"]; 
+$name= ["Haris","Ahmed","Ansari","Haris","Ahmed","Ansari"];     
 @endphp    
 
 @foreach ($name as $names)
@@ -15,3 +15,4 @@ $name= ["Haris","Ahmed","Ansari","Haris","Ahmed","Ansari"];
 <a style="color: rgb(255, 0, 0)" href="hars">{{$names}} <br></a>
 @endif
 @endforeach
+
